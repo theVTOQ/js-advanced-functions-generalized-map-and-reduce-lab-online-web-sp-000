@@ -6,3 +6,11 @@ function map(array, fn){
   });
   return transform;
 }
+
+function reduce(array, fn, startingPoint = 0){
+  let memo = startingPoint;
+  for(let i = 0; i < array.length; i++){
+    memo = fn(array[i]);
+  }
+  return transform;
+}
