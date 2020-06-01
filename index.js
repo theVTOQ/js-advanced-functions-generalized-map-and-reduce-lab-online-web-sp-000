@@ -7,7 +7,7 @@ function map(array, fn){
   return transform;
 }
 
-function reduce(array, fn, startingPoint = 0){
+function reduce(array, fn, startingPoint){
   let memo = startingPoint;
   for(let i = 0; i < array.length; i++){
     memo = fn(array[i], memo);
