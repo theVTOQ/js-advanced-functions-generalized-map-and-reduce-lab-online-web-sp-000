@@ -10,7 +10,7 @@ function map(array, fn){
 function reduce(array, fn, startingPoint = 0){
   let memo = startingPoint;
   for(let i = 0; i < array.length; i++){
-    memo = fn(array[i]);
+    memo = fn(array[i], memo);
   }
   return memo;
 }
