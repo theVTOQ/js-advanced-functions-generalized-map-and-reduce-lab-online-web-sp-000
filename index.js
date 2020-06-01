@@ -8,8 +8,14 @@ function map(array, fn){
 }
 
 function reduce(array, fn, startingPoint){
+  let startingIndex = 0;
+  if (startingPoint == undefined){
+    startingIndex = 1;
+    startingPoint = array[0];
+  }
+
   let memo = startingPoint;
-  for(let i = 0; i < array.length; i++){
+  for(let i = startingIndex; i < array.length; i++){
     memo = fn(array[i], memo);
   }
   return memo;
